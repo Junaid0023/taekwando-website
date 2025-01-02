@@ -40,6 +40,7 @@ nav{
     right: 0;
     left: 0;
     top: o;
+    width: 100%;
     background-color: var(--light-red);
     display: flex;
     align-items: center;
@@ -66,11 +67,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content:center ;
+  
     
 }
 
 .links  .active{
-    border-bottom: 2px solid var(--color-white);
+    /* border-bottom: 2px solid var(--color-white); */
 }
 
 .links a{
@@ -89,17 +91,21 @@ nav{
     
 }
 
+
 .menu-icon {
     display: none;
+    align-items: center;
+    justify-content: center;
     color: white;
-    margin-left: 2rem;
     font-size: 30px;
     cursor: pointer;
+    
 }
 
-.reach-enrol{
+
+/* .reach-enrol{
     display: inline-flex;
-}
+} */
 
 .container{
     display: grid;
@@ -141,7 +147,6 @@ nav{
 
 .reach-us{
     color: var(--light-red);
-    border: 2px solid black;
     transition: 0.4s ease-in-out;
 }
 
@@ -194,6 +199,7 @@ section{
     padding: 0 0 10px 0;
     border-radius: 10px;
     border: 2px solid lightgray;
+    overflow: hidden;
     
 }
 
@@ -207,15 +213,13 @@ section{
     height: 300px;
     width: 100%;
     object-fit: cover;
+   
 }
 
-.reason-image img{
-    height: 100%;
-    width: 100%;
-}
+
 
 .reasons-title, .descriptions{
-    padding: 4px 30px;
+    padding: 1rem 30px;
 }
 
 main img{
@@ -224,7 +228,7 @@ main img{
 }
 
 footer{
-    /* position: relative; */
+    /* position: absolute; */
     text-align: center;
     bottom: 0;
     right: 0;
@@ -290,6 +294,7 @@ footer .socials :active{
         position: fixed;
         right: 0;
         left: 0;
+        box-shadow: 1rem 1rem 1rem 0.3rem rgba(0,0,0,0.2);  
 
     }
 
@@ -299,32 +304,40 @@ footer .socials :active{
     }
 
     .links {
-      display: inline-block;
-      width: 100%;
-      background-color: var(--light-red);
-      position: fixed;
-      right: 0;
-      top: 7rem;
-      text-align: center; 
-      box-shadow: 1rem 3rem 2rem rgba(0,0,0,0.7);  
+        /* position: absolute; */
+        display: none;
+        /* width: 28rem; */
+        width: 100%;
+        background-color: var(--light-red);
+        position: fixed;
+        right: 0;
+        top: 4rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1rem 3rem 1rem rgba(0,0,0,0.4);  
+        
+        
  
    
     } 
 
     .links a{
-        font-size: 1.5rem;
-        display: none;
-        padding: 2rem 6rem;
-        margin-bottom: 10px;    
-        
+        /* margin-bottom: 4rem; */
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+    
+        margin-bottom: 2px;
+        font-weight: bold;
+      
+   
     }
 
     .menu-icon {
-        display: none;
-        position: relative;
+        display: flex;
+        
     }
-
-    
 
     .jouney{
         margin-bottom: 2.5rem;
