@@ -1,19 +1,14 @@
 
 
-const menuicon = document.querySelector('.menu-icon'); // The menu icon
-const links = document.querySelector('.links'); // The menu links
+const menuicon = document.querySelector('.menu-icon'); 
+const links = document.querySelector('.links'); 
 
-// const closeicon = document.createElement('i');
-// closeicon.classList.add("material-symbols-outlined close" >
-//     close); // Add FontAwesome close icon classes
-// menuicon.appendChild(closeicon); 
-// // Function to remove the menu when clicked
+menuicon.addEventListener('click', function(){
+    links.classList.toggle('show-links')
 
-menuicon.addEventListener('click', () => {
-    if(links.style.display === 'none') {
-        links.style.display = 'block'
-    }
-    else{
-        links.style.display = 'none'
+    if (links.classList.contains('show-links')) {
+        menuicon.innerHTML = '<i class="bx bx-x"></i>'; 
+    } else {
+        menuicon.innerHTML = '<i class="bx bx-menu"></i>'; 
     }
 })

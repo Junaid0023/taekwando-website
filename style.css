@@ -10,48 +10,53 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
-   
- 
-
-
 }
 
 
-body{
+.homepage{
     background-image: linear-gradient(rgba(0,0,0,0.2), black), url(images/girlchild\ homepage.jpg);
+    background-color: rgb(226, 217, 206);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
     margin: 0;
+    padding-top: 60px;
+
     
 }
 
 :root{
-    --light-red:  rgb(184, 45, 2);
+    --light-red:  rgb(26, 25, 25);
     --black-color: black;
-    --color-white: white;
+    --color-white: rgb(243, 238, 238);
+    --color-secondary: rgb(226, 217, 206);
+    --color-deep: rgb(110, 102, 91);
+   
 }
 
 nav{
     position: fixed;
     right: 0;
     left: 0;
-    top: o;
+    top: 0;
+    height: 70px;
     width: 100%;
     background-color: var(--light-red);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 10%;
+    padding: 0 15%;
     z-index: 201;
-    /* width: 100%; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4)
  
 }
 
 .logo{
+    background: var(--color-secondary);
+    color: var(rgb(233, 61, 61));
     font-weight: 800;
     font-size: 1.5rem;
     /* font-family: "Bebas Neue", sans-serif; */
@@ -59,20 +64,28 @@ nav{
 }
 
 .logo span{
-    color: white;
+    color: var(--color-white);
 
 }
 
 .links{
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center ;
+   
   
     
 }
+.links.show-links{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    transform: translateY(0); /* Slide into position */
+    opacity: 1;
+}
 
 .links  .active{
-    /* border-bottom: 2px solid var(--color-white); */
+  color: var(--color-secondary);
 }
 
 .links a{
@@ -81,13 +94,14 @@ nav{
     color: white;
     font-size: 1.2rem;
     text-transform: capitalize;
-    font-family: "PT Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     /* gap: 2rem; */
+    transition: 1s ease;
 }
 
 .links a:hover{
-    border-bottom: 2px solid var(--color-white);
+   color: var(--color-secondary);
     
 }
 
@@ -110,12 +124,13 @@ nav{
 .container{
     display: grid;
     grid-template-columns: no-repeat(2, 1fr);
-    padding: 15% 10%;
+    padding: 15% 15%;
     color: white;
 }
 
 .hero{
-    font-size: 60px;
+    /* text-transform: capitalize; */
+    font-size: 3rem;
     line-height: 68px;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -128,37 +143,31 @@ nav{
 }
 
 .jouney{
-    color: var(--light-red);
-    margin: 0.8rem 0;
-}
-
-.reach-enrol{
-    display: flex;
-    gap: 20px;
-}
-
-.reach-us, .enrol{
-    font-size: 13px;
-    border-radius: 20px;
-    padding: 10px 18px;
-    cursor: pointer; 
+    
+    color: var(--color-white);
     
 }
 
-.reach-us{
-    color: var(--light-red);
+.reach-us, .enrol {
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 10px 38px;
+    cursor: pointer;
+    border: 2px solid var(--light-red);
     transition: 0.4s ease-in-out;
+    
 }
+
 
 .reach-us:hover{
     background-color: transparent;
-    color: var(--color-white);
-
-   
+    /* color: var(--color-white); */
 }
 
 
 .enrol{
+    margin-left: 20px;
     background-color: transparent;
     border: 2px solid var(--light-red);
     color: white;
@@ -167,7 +176,7 @@ nav{
 }
 
 .enrol:hover{
-    background-color: var(--light-red);
+    /* background-color: var(--light-red); */
 }
 
 header{
@@ -177,64 +186,70 @@ header{
 
 section{
     background-color: var(--color-white);
-    padding: 30px 10%;
+    padding: 30px 15%;
     width: 100%;
 
+}
+
+.join-us{
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 .reasons h1{
     color: white;
-    font-size: 50px;
+    /* font-size: 20px; */
  
 }
 
 .reasons{
+    /* display: flex; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    /* margin: 0 auto; */
+    padding: 4rem 0;
    
 }
 
-.reason-container{
-    padding: 0 0 10px 0;
-    border-radius: 10px;
-    border: 2px solid lightgray;
-    overflow: hidden;
-    
-}
-
-
-.join-us{
-    text-transform: uppercase;
-    padding: 2rem 0;
-}
-
-.reason-image {
-    height: 300px;
+.reason-image{
     width: 100%;
-    object-fit: cover;
-   
+    display: flex;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.descriptions{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-self: center;
+}
+
+.reasons-title{
+    font-size: 2rem;
 }
 
 
 
-.reasons-title, .descriptions{
-    padding: 1rem 30px;
+.about-icon{
+    position: absolute;
+    right: 4px;
+    bottom: 5px;
+    background: var(--color-deep);
+    border-radius: 50%;
+    color: var(--color-secondary);
 }
 
-main img{
-    width: 100%;
-    background-color: linear-gradient(rgba(0,0,0,0.2), black)
-}
 
 footer{
-    /* position: absolute; */
+    width: 100%;
+    position: relative;
     text-align: center;
     bottom: 0;
-    right: 0;
+    /* right: 0; */
     left: 0;
     background-color: var(--light-red);
-    padding: 30px 4%;
+    padding: 30px 0;
 }
 
 footer .socials{
@@ -242,18 +257,24 @@ footer .socials{
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 footer .socials i{
     margin-right: 20px;
     color: white;
     transition: 0.4s ease-in-out;
-    font-size: 20px;
+    font-size: 25px;
+    padding: 12px;
+    border-radius: 50%;
+   
 
 }
 
 footer .socials i:hover{
-    transform: translateY(-6px);
+    background-color: var(--color-secondary);
+    color: var(--black-color);
 }
 
 footer .socials :active{
@@ -287,8 +308,10 @@ footer .socials :active{
 
 
 
+
  @media (max-width:  836px) {
     nav{
+       
         padding: 1rem 2rem;
         position: relative;
         position: fixed;
@@ -304,37 +327,37 @@ footer .socials :active{
     }
 
     .links {
-        /* position: absolute; */
-        display: none;
-        /* width: 28rem; */
-        width: 100%;
-        background-color: var(--light-red);
-        position: fixed;
-        right: 0;
-        top: 4rem;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        box-shadow: 1rem 3rem 1rem rgba(0,0,0,0.4);  
-        
+        background-color: var(--black-color);
+        display: none;
+        position: absolute;
+        right: 3px;
+        top: 64px;
+        transform: translateY(-20px); /* Off-screen initially */
+         opacity: 0; /* Invisible initially */
+          transition: all 0.4s ease-in-out;
+  
         
  
    
     } 
 
-    .links a{
-        /* margin-bottom: 4rem; */
-        padding: 3rem 0;
-        display: flex;
-        flex-direction: column;
-    
-        margin-bottom: 2px;
+    .links li{
+        margin-bottom: 4rem;
+         padding: 2rem 5rem;
+        margin: 2px;
         font-weight: bold;
-      
+        width: 100%;
+ 
+       
    
     }
 
     .menu-icon {
+        /* position: relative; */
         display: flex;
         
     }
@@ -370,7 +393,7 @@ footer .socials :active{
 
     .reasons{
         display: grid;
-        grid-template-columns: 1fr
+        grid-template-columns: repeat(1, 1fr)
         
     }
 
@@ -378,12 +401,25 @@ footer .socials :active{
         margin: 0 auto;
     }
 
-    .footer-links a{
+    /* footer .socials i{
+        gap: 3rem;
+        display: flex;
+    } */
+
+    .footer-links {
         font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .footer-links a {
+        padding: 1rem 0;
     }
 
     .copyright p{
         font-size: 0.8rem;
+        background-color: rgba(240, 255, 255, 0.205);
        
     
     }
