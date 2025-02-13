@@ -12,3 +12,8 @@ menuicon.addEventListener('click', function(){
         menuicon.innerHTML = '<i class="bx bx-menu"></i>'; 
     }
 })
+
+
+// --------------footer date------------------
+
+const year = document.querySelector('#year').innerHTML = new Date().getFullYear()

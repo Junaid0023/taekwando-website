@@ -37,10 +37,12 @@ form input{
     width: 100%;
     height: 40px;
     margin-bottom: 10px;
+    padding: 0 10px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     border-radius: 10pxs;
 }
+
 
 form textarea{
      
@@ -71,4 +73,18 @@ form button{
 }
 form button:hover{
     background-color: rgb(34, 33, 33);
+}
+
+
+@media (max-width: 836px) {
+
+    .register-page{
+       
+    }
+    .register-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+        margin: 6rem 0;
+    }
 }
