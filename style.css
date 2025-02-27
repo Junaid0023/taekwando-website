@@ -157,7 +157,7 @@ nav{
     margin-top: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 30px;
     padding: 30px 0;
     /* background-color: red; */
@@ -331,6 +331,7 @@ footer .socials :active{
 
 
 footer .copyright{
+    padding-top: 40px;
     color: gray;
     font-size: small;
 }
@@ -395,7 +396,7 @@ footer .copyright{
     .hero{
         
         font-size: 2rem;
-        line-height: 3rem;
+        /* line-height: 3rem; */
     }
 
     .CTA-container{
@@ -407,11 +408,7 @@ footer .copyright{
     }
 
     
-    .CTA-container button{
-        font-size: .7rem;
-        display: flex;
-        /* flex-direction: column; */
-    }
+    
 
 
     .why-container{
@@ -460,7 +457,8 @@ footer .copyright{
 
     .reasons{
         display: grid;
-        grid-template-columns: repeat(1, 1fr)
+        grid-template-columns: repeat(1, 1fr);
+        
         
     }
 
@@ -498,7 +496,6 @@ footer .copyright{
 
 
   } 
-
 
 
 
