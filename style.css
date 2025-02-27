@@ -342,8 +342,8 @@ footer .copyright{
 
  @media (max-width:  836px) {
     nav{
-        padding: 1rem 1rem;
-        position: relative;
+        padding: .2rem 1rem;
+        /* position: relative; */
         position: fixed;
         right: 0;
         left: 0;
@@ -358,17 +358,15 @@ footer .copyright{
 
     .links {
         width: 70%;
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: start; */
         background-color: var(--black-color);
         /* display: none; */
         position: absolute;
         right: 3px;
         top: 90px;
-        transform: translatex(60px); 
+        transform: translatex(100px); 
         opacity: 0; 
         transition: all 0.4s ease-in-out;
         box-shadow: 1rem 1rem 1rem 0.3rem rgba(0,0,0,0.2);  
@@ -378,6 +376,9 @@ footer .copyright{
      
     .links li{
         padding: 30px 0;
+        margin-bottom: 20px;
+        /* background-color: red; */
+        width: 100%;
     }
     
 
@@ -395,7 +396,7 @@ footer .copyright{
 
     .hero{
         
-        font-size: 2rem;
+        font-size: 3.3rem;
         /* line-height: 3rem; */
     }
 
