@@ -390,6 +390,7 @@ footer .copyright{
 
 
     .contents{
+        margin-top: -60px;
         max-width: 100%;
         text-align: center;
     }
